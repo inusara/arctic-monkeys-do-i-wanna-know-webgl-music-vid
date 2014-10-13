@@ -32,7 +32,7 @@ function init() {
     renderer.setSize(window.innerWidth, window.innerHeight);
 
     document.body.appendChild(renderer.domElement);
-
+    playSong();
 }
 
 function animate() {
@@ -45,6 +45,12 @@ function animate() {
 
     renderer.render(scene, camera);
 
+}
+
+function playSong() {
+    var audio = document.createElement('audio');
+    audio.src = 'assets/audio/Arctic_Monkeys-Do_I_Wanna_Know.mp3';
+    audio.play();
 }
 
 });
